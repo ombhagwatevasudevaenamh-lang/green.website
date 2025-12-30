@@ -1,0 +1,129 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Delhi Pollution Awareness | Amrit Raj</title>
+<style>
+body{margin:0;font-family:'Segoe UI',Arial,sans-serif;background:#0f2027;color:#fff;overflow-x:hidden;perspective:1200px;}
+*{box-sizing:border-box;}
+#particles-js,#overlay-smoke{position:fixed;width:100%;height:100%;z-index:-1;top:0;left:0;}
+section{background:rgba(255,255,255,0.05);margin:25px auto;padding:30px;max-width:960px;border-radius:18px;box-shadow:0 8px 25px rgba(0,0,0,0.4);opacity:0;transform: translateY(50px) rotateX(10deg);transition: all 0.7s ease;}
+section.visible{opacity:1;transform: translateY(0) rotateX(0deg);}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;}
+.card{background:rgba(255,255,255,0.08);padding:22px;border-radius:18px;box-shadow:0 0 25px rgba(0,242,254,0.4);font-size:14px;text-align:center;transition:all 0.5s ease;position:relative;transform-style: preserve-3d;}
+.card::after{content:"";position:absolute;top:-5px;left:-5px;right:-5px;bottom:-5px;border-radius:18px;box-shadow:0 0 20px #00f2fe,0 0 35px #00ff87,0 0 50px #00f2fe;opacity:0;transition:0.5s;}
+.card:hover::after{opacity:1;}
+.card:hover{transform:translateY(-8px) scale(1.05) rotateX(2deg) rotateY(2deg);}
+header{text-align:center;padding:70px 20px;}
+header h1{font-size:44px;font-weight:900;text-shadow:0 0 25px #00f2fe,0 0 35px #00ff87;}
+header p{font-size:15px;opacity:0.85;}
+.button{display:inline-block;padding:14px 30px;background:#00f2fe;color:#000;border-radius:40px;font-weight:bold;text-decoration:none;transition:0.5s;font-size:15px;box-shadow:0 0 20px #00f2fe, 0 0 35px #00ff87;}
+.button:hover{background:#00ff87;box-shadow:0 0 30px #00ff87,0 0 50px #00f2fe;transform:scale(1.1) rotateY(3deg);}
+iframe,img{max-width:100%;border-radius:18px;margin-top:10px;}
+.counter{font-size:36px;font-weight:bold;color:#00ff87;text-align:center;text-shadow:0 0 15px #00ff87,0 0 25px #00f2fe;}
+.counter-label{font-size:14px;opacity:0.8;text-align:center;margin-top:5px;}
+footer{background:rgba(0,0,0,0.95);color:#aaa;text-align:center;padding:35px;border-top:2px solid #00f2fe;}
+</style>
+</head>
+<body>
+<div id="particles-js"></div>
+<canvas id="overlay-smoke"></canvas>
+<header>
+<h1>Delhi Pollution Awareness</h1>
+<p><b>Name:</b> Amrit Raj | <b>Class:</b> IX</p>
+<p>Ultimate 3D Cinematic AI Project</p>
+</header>
+<section>
+<h2>Introduction</h2>
+<p>Delhi suffers from severe air pollution, smog, and waste problems. This project demonstrates causes, effects, and practical solutions for cleaner air.</p>
+<img src="https://upload.wikimedia.org/wikipedia/commons/6/60/Poulluted_killer_fog_in_Delhi.jpg" alt="Delhi Smog">
+<a href="#solutions" class="button">View Solutions</a>
+</section>
+<section>
+<h2>Air Pollution in Delhi</h2>
+<div class="grid">
+<div class="card">
+<img src="https://i.guim.co.uk/img/media/063d8169364ca1a436ceb908cc5f0edeaac4e654/0_189_2639_1583/master/2639.jpg" alt="Traffic Pollution">
+<p>Vehicle emissions increase PM2.5 & PM10.</p>
+</div>
+<div class="card">
+<img src="https://platform.vox.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/9734675/GettyImages_871511920IndiaDelhi.jpg" alt="Smog Delhi">
+<p>Smog reduces visibility and causes respiratory problems.</p>
+</div>
+</div>
+</section>
+<section>
+<h2>Awareness Video</h2>
+<div style="text-align:center;">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/03EQqdD2PDw" frameborder="0" allowfullscreen></iframe>
+</div>
+</section>
+<section>
+<h2>Garbage & Waste</h2>
+<div class="grid">
+<div class="card">
+<img src="https://www.aljazeera.com/wp-content/uploads/2018/09/8d3d2c302d8d4747aa902b249c9e300f_18.jpeg" alt="Ghazipur Landfill">
+<p>Ghazipur landfill is one of Asia's largest.</p>
+</div>
+<div class="card">
+<img src="https://d3i6fh83elv35t.cloudfront.net/static/2024/11/2024-11-18T050426Z_1854716573_RC2E7BAP0DH6_RTRMADP_3_INDIA-POLLUTION-1024x722.jpg" alt="Garbage Burning">
+<p>Burning garbage releases harmful gases.</p>
+</div>
+</div>
+</section>
+<section>
+<h2>Effects of Pollution</h2>
+<ul>
+<li>Respiratory & heart problems</li>
+<li>Eye irritation & skin problems</li>
+<li>Reduced immunity & shortened lifespan</li>
+</ul>
+</section>
+<section>
+<h2>Environmental Counters</h2>
+<div class="grid">
+<div class="card">
+<div class="counter" id="counter-garbage">0</div>
+<div class="counter-label">Tons of Garbage Daily</div>
+</div>
+<div class="card">
+<div class="counter" id="counter-vehicles">0</div>
+<div class="counter-label">Vehicles on Road</div>
+</div>
+<div class="card">
+<div class="counter" id="counter-trees">0</div>
+<div class="counter-label">Trees Planted</div>
+</div>
+</div>
+</section>
+<section id="solutions">
+<h2>Practical Solutions</h2>
+<div class="grid">
+<div class="card">Use public transport / metro</div>
+<div class="card">Plant trees & maintain green spaces</div>
+<div class="card">Stop burning garbage</div>
+<div class="card">Promote electric vehicles & solar energy</div>
+<div class="card">Segregate waste: wet, dry, recyclables</div>
+<div class="card">Avoid firecrackers</div>
+<div class="card">Enforce factory emission rules</div>
+<div class="card">Wear masks on high AQI days</div>
+<div class="card">Conserve electricity</div>
+<div class="card">Spread awareness in communities & social media</div>
+</div>
+</section>
+<footer>
+<p>Created by Amrit Raj | Class IX</p>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+<script>
+particlesJS("particles-js",{
+  particles:{number:{value:130,density:{enable:true,value_area:800}},color:{value:["#00f2fe","#00ff87","#ffffff"]},shape:{type:"circle"},opacity:{value:0.35,random:true},size:{value:4,random:true},line_linked:{enable:true,distance:140,color:"#00f2fe",opacity:0.25,width:1},move:{enable:true,speed:3,direction:"none",out_mode:"out"}},interactivity:{events:{onhover:{enable:true,mode:"repulse"}}},retina_detect:true});
+const sections=document.querySelectorAll('section');
+const observer=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting) entry.target.classList.add('visible');});},{threshold:0.2});sections.forEach(section=>observer.observe(section));
+function animateCounter(id,target){let count=0;const el=document.getElementById(id);const step=Math.ceil(target/100);const interval=setInterval(()=>{count+=step;if(count>=target){count=target;clearInterval(interval);}el.innerText=count;},15);}
+animateCounter('counter-garbage',11000);
+animateCounter('counter-vehicles',1500000);
+animateCounter('counter-trees',5000);// Smoke overlay effect const canvas=document.getElementById('overlay-smoke'); const ctx=canvas.getContext('2d'); canvas.width=window.innerWidth; canvas.height=window.innerHeight; let smokeParticles=[]; class SmokeParticle{constructor(){this.x=Math.random()*canvas.width;this.y=Math.random()*canvas.height;this.size=20+Math.random()*30;this.speedX=Math.random()*1-0.5;this.speedY=Math.random()*0.5+0.2;this.opacity=Math.random()*0.4+0.1;} update(){this.x+=this.speedX;this.y-=this.speedY; if(this.y< -50){this.y=canvas.height; this.x=Math.random()*canvas.width;} this.opacity+=Math.random()0.01-0.005; if(this.opacity>0.4)this.opacity=0.4; if(this.opacity<0.1)this.opacity=0.1;} draw(){ctx.beginPath();ctx.arc(this.x,this.y,this.size,0,Math.PI2);ctx.fillStyle='rgba(255,255,255,'+this.opacity+')';ctx.fill();}} for(let i=0;i<60;i++){smokeParticles.push(new SmokeParticle());} function animateSmoke(){ctx.clearRect(0,0,canvas.width,canvas.height);smokeParticles.forEach(p=>{p.update();p.draw();});requestAnimationFrame(animateSmoke);}animateSmoke(); window.addEventListener('resize',()=>{canvas.width=window.innerWidth;canvas.height=window.innerHeight;}); </script>
+
+</body>
+</html>
